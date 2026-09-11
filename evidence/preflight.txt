@@ -1,0 +1,3 @@
+✓ spec valid: competing_market_makers v0.1.0 (kind=duel, env=stage)
+✓ input fixture valid against input_schema (fixtures/input.json)
+✓ preflight passed

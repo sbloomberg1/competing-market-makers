@@ -1,0 +1,17 @@
+{
+  "episodes_verified": 8192,
+  "scores": [
+    0.4618557861328125,
+    0.1500631591796875,
+    0.3688992919921875,
+    -0.5818483032226562
+  ],
+  "winner": 0,
+  "active": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "compressed_bytes": 27920050
+}

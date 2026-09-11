@@ -1,0 +1,25 @@
+{
+  "candidate": "0.1.0",
+  "kind": "duel",
+  "episodes": 8192,
+  "master_seeds_measured": 20,
+  "reference_mean": 0.4608876348876953,
+  "reference_round_sd": 0.003884241061190574,
+  "solo_quarter_takeover_margin": 0.0011522190872192382,
+  "solo_variance_rule_pass": null,
+  "container_seconds": 36.6038,
+  "full_loop_seconds": 38.246,
+  "records_bytes": 27920050,
+  "replay_episodes_verified": 8192,
+  "container_reference_scores": [
+    0.4618557861328125,
+    0.1500631591796875,
+    0.3688992919921875,
+    -0.5818483032226562
+  ],
+  "tests": "26 passed",
+  "published": false,
+  "stage_approved": false,
+  "release_ready": false,
+  "strong_field_wins": 20
+}
