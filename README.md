@@ -1,6 +1,6 @@
 # Competing Market Makers
 
-Research candidate 0.1.0. Local implementation and evidence are available; this is not an activated Apex competition. See `HANDOFF.md` for the admission status.
+Research candidate 0.1.1. Local implementation and evidence are available; this is not an activated Apex competition. See `HANDOFF.md` for the admission status.
 
 Four submitted market makers compete for the same informed and retail order flow. All makers choose from the same prior market snapshot, with their own private account history.
 
