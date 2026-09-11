@@ -30,5 +30,23 @@
   "local_build_metadata": [
     "evidence/player-build.json",
     "evidence/referee-build.json"
-  ]
+  ],
+  "competition_version": "0.1.1",
+  "signed_release": {
+    "tag": "v0.1.1",
+    "source_commit": "f309263f71a17eab85126978d26c5e64b91e4a45",
+    "workflow_url": "https://github.com/sbloomberg1/competing-market-makers/actions/runs/34649873981",
+    "images": {
+      "player": {
+        "ref": "ghcr.io/sbloomberg1/competing-market-makers-player",
+        "digest": "sha256:dc473c1d5fad004ff9c747b71d20cfd79695ca4aeba779e85b376b77479a6f4f"
+      },
+      "referee": {
+        "ref": "ghcr.io/sbloomberg1/competing-market-makers-referee",
+        "digest": "sha256:c14baa6990a34b4da67a03fd272626dfc2992e43b89dda95d0886f64e94c9cae"
+      }
+    },
+    "cosign_identity": "https://github.com/sbloomberg1/competing-market-makers/.github/workflows/release.yml@refs/tags/v0.1.1",
+    "verification": "evidence/release/verification.json"
+  }
 }

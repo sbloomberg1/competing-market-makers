@@ -1,6 +1,6 @@
 # Draft: [onboarding] competing_market_makers v0.1.1
 
-**Prepared for review; do not file as an activation request until release fields and open decisions are resolved.**
+**Ready to request design and stage review once access is arranged. Open admission decisions are listed below; this draft has not been sent.**
 
 ## What is the competition?
 
@@ -10,32 +10,36 @@ This is a separate follow-on competition in a paired market-simulation project. 
 
 ## HANDOFF.md
 
-Attach `HANDOFF.md` and `evidence/REPORT.md`, or link them at the released tag when available. The private questionnaire is complete with explicit limitations and outstanding decisions.
+Attach [HANDOFF.md](https://github.com/sbloomberg1/competing-market-makers/releases/download/v0.1.1/HANDOFF.md) and the [complete review package](https://github.com/sbloomberg1/competing-market-makers/releases/download/v0.1.1/review-package.tar.gz). The private questionnaire is complete with explicit limitations and outstanding decisions. Use these finalized assets rather than the pre-build handoff at the source tag.
 
 ## Evaluation time budget vs. timeouts
 
-Proposed worst-case planning budget: 68s startup/reset + 3,072 action calls × 0.1s + 240s scoring/record-write reserve = 615.2s. Referee and evaluation timeouts are both 1,200s; approximately 1.95× headroom. Local full-size reference run: 39.20s in the referee at one CPU / 512 MiB. Stage hardware and dense-record write allowance still require verification; no unflagged over-budget claim is made.
+Proposed worst-case planning budget: 68s startup/reset + 3,072 action calls × 0.1s + 240s scoring/record-write reserve = 615.2s. Referee and evaluation timeouts are both 1,200s; approximately 1.95× headroom. Local full-size reference run: 36.60s in the referee; signed released-image run on GitHub: 62.92s (66.08s full loop). Both used one CPU / 512 MiB. Stage hardware and dense-record write allowance still require verification; no unflagged over-budget claim is made.
 
 ## Release fields
 
 | Form field | Value |
 |---|---|
 | Competition id | `competing_market_makers` |
-| Spec version | `0.1.1` candidate |
+| Spec version | `0.1.1` private prerelease |
 | Competition repo URL | https://github.com/sbloomberg1/competing-market-makers (private) |
-| Released git tag | Pending; intended `v0.1.1` after design review |
+| Released git tag | [`v0.1.1`](https://github.com/sbloomberg1/competing-market-makers/releases/tag/v0.1.1) |
 | Player image ref | `ghcr.io/sbloomberg1/competing-market-makers-player` |
-| Player image digest | Pending signed registry release; local build metadata supplied separately |
-| Referee image digest | Pending signed registry release; local build metadata supplied separately |
+| Player image digest | `sha256:dc473c1d5fad004ff9c747b71d20cfd79695ca4aeba779e85b376b77479a6f4f` |
+| Referee image ref | `ghcr.io/sbloomberg1/competing-market-makers-referee` |
+| Referee image digest | `sha256:c14baa6990a34b4da67a03fd272626dfc2992e43b89dda95d0886f64e94c9cae` |
 | Target environment | Stage first |
-| spec.yaml | Attach generated final spec from release workflow; current `spec.yaml` is a development draft |
+| spec.yaml | [Final release asset](https://github.com/sbloomberg1/competing-market-makers/releases/download/v0.1.1/spec.yaml), with [input schema](https://github.com/sbloomberg1/competing-market-makers/releases/download/v0.1.1/input.schema.json) |
+
+Signing identity: `https://github.com/sbloomberg1/competing-market-makers/.github/workflows/release.yml@refs/tags/v0.1.1`; issuer: `https://token.actions.githubusercontent.com`. [Successful workflow](https://github.com/sbloomberg1/competing-market-makers/actions/runs/34649873981); exact verification output and replay evidence are included in the release package.
 
 ## Pre-submission checks
 
 - [x] `apex-dev preflight --spec ./spec.yaml --input fixtures/input.json` passes structural and input validation.
 - [x] Custom local container harness produced a valid `result.json` and replay archive. The pinned toolkit's `apex-dev run` itself does not execute the match.
-- [ ] Image keyless-signed by the release workflow on the released tag.
-- [ ] Image pushed and pullable by its registry digest.
+- [x] Both images keyless-signed and signatures verified on the released tag.
+- [x] Both images pushed, pulled by registry digest and evaluated by the authenticated release workflow. Apex pull access still needs to be arranged.
+- [x] Final spec passes toolkit onboarding triage as well as preflight.
 - [ ] Apex admission decisions in `HANDOFF.md` resolved, with stage validation scheduled.
 
 Local tests: 26 passed. Full replay accounting: 8,192 episodes verified. Ten adversarial submission fixtures exercised through the complete player/referee loop. The adaptive reference wins 20/20 strong-field matches; close-policy reliability remains unqualified.

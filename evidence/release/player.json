@@ -1,0 +1,42 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/python@3.12-slim?digest=sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "label:org.opencontainers.image.source": "https://github.com/sbloomberg1/competing-market-makers"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ]
+      },
+      "environment": {
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "default/default/ib7b2aiq4pwtu34lpz0uv80ky",
+  "containerimage.config.digest": "sha256:0e19c616ac91dc41008dcabebc2fc49190466a62febc348e41fd01317e49ae35",
+  "containerimage.digest": "sha256:dc473c1d5fad004ff9c747b71d20cfd79695ca4aeba779e85b376b77479a6f4f",
+  "image.name": "ghcr.io/sbloomberg1/competing-market-makers-player:v0.1.1"
+}

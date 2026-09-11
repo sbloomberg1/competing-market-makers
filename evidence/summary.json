@@ -1,5 +1,5 @@
 {
-  "candidate": "0.1.0",
+  "candidate": "0.1.1",
   "kind": "duel",
   "episodes": 8192,
   "master_seeds_measured": 20,
@@ -18,8 +18,13 @@
     -0.5818483032226562
   ],
   "tests": "26 passed",
-  "published": false,
+  "published": true,
   "stage_approved": false,
-  "release_ready": false,
-  "strong_field_wins": 20
+  "release_ready": true,
+  "strong_field_wins": 20,
+  "engine_version": "0.1.0",
+  "activation_ready": false,
+  "release_verification": "release/verification.json",
+  "release_referee_seconds": 62.9215,
+  "release_full_loop_seconds": 66.079
 }

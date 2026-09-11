@@ -1,0 +1,44 @@
+{
+  "version": "0.1.1",
+  "release_tag": "v0.1.1",
+  "source_commit": "f309263f71a17eab85126978d26c5e64b91e4a45",
+  "repository": "https://github.com/sbloomberg1/competing-market-makers",
+  "release_url": "https://github.com/sbloomberg1/competing-market-makers/releases/tag/v0.1.1",
+  "workflow_url": "https://github.com/sbloomberg1/competing-market-makers/actions/runs/34649873981",
+  "workflow_conclusion": "success",
+  "images": {
+    "player": {
+      "ref": "ghcr.io/sbloomberg1/competing-market-makers-player",
+      "digest": "sha256:dc473c1d5fad004ff9c747b71d20cfd79695ca4aeba779e85b376b77479a6f4f"
+    },
+    "referee": {
+      "ref": "ghcr.io/sbloomberg1/competing-market-makers-referee",
+      "digest": "sha256:c14baa6990a34b4da67a03fd272626dfc2992e43b89dda95d0886f64e94c9cae"
+    }
+  },
+  "cosign_identity": "https://github.com/sbloomberg1/competing-market-makers/.github/workflows/release.yml@refs/tags/v0.1.1",
+  "cosign_issuer": "https://token.actions.githubusercontent.com",
+  "signature_verification": "Both images verified by cosign v2.5.2 in the linked release workflow; raw output retained alongside this file.",
+  "repository_visibility": "PRIVATE",
+  "package_visibility": "PRIVATE",
+  "visibility_checked_utc_date": "2026-09-11",
+  "visibility_evidence": "Repository: authenticated gh repo view. Four package Private badges: authenticated GitHub profile packages page.",
+  "spec_sha256": "02cbfbd4afef1e1935dbe77f43df32ef0ad814a0d40dd32a122028f6cd65be67",
+  "released_images_run": {
+    "environment": "GitHub-hosted Ubuntu runner; isolated Docker harness, not Apex stage",
+    "episodes": 8192,
+    "referee_seconds": 62.9215,
+    "full_loop_seconds": 66.079,
+    "raw_scores": [
+      0.4618557861328125,
+      0.1500631591796875,
+      0.3688992919921875,
+      -0.5818483032226562
+    ],
+    "matches_local_result_excluding_elapsed_time": true,
+    "replay_verified": true,
+    "replay_sha256": "db4b3b6c9fcff12cf839492d89988ed27d6b4f25d03f2cbcdf8fc54bdac3b240",
+    "replay_compressed_bytes": 27920050
+  },
+  "stage_approved": false
+}

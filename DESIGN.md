@@ -1,4 +1,4 @@
-# Competing Market Makers — design candidate 0.1.0
+# Competing Market Makers — design candidate 0.1.1
 
 Status: research and implementation candidate; not approved or released.
 

@@ -1,6 +1,6 @@
 # Evaluation evidence — competing-market-makers
 
-Candidate 0.1.0, measured locally on 11 September 2026. This is a research qualification report, not a stage or production approval.
+Competition prerelease 0.1.1, engine 0.1.0; measured locally and on GitHub on 11 September 2026. This is a research qualification report, not a stage or production approval.
 
 | Check | Result |
 |---|---|
@@ -14,7 +14,7 @@ Candidate 0.1.0, measured locally on 11 September 2026. This is a research quali
 | Reference mean | 0.460887635 |
 | Sample standard deviation | 0.003884241 |
 | Quarter of a 1% margin | 0.001152219 |
-| Release / stage approval | Pending |
+| Release / stage approval | Signed private prerelease complete / stage pending |
 
 The adaptive reference wins all 20 ordinary fields against wide, tight and static policies. It also wins all 20 seat permutations in the five-seed seat audit, and all five stress fields. The greatest within-seed score range for the adaptive policy across seats is 0.000789.
 
@@ -30,3 +30,9 @@ This is a duel, so the solo 1% takeover rule does not directly apply. Its raw-sc
 - `../scripts/read_records.py`: replay and score arithmetic verifier.
 
 The numerical reference experiments run trusted strategies in the host process; isolated full-size container runs separately confirm the runtime. Only the recorded configurations and reference policies were timed. The worst-case budget is derived in HANDOFF.md; it has not been validated on Apex stage hardware.
+
+## Signed released-image verification
+
+[GitHub release workflow](https://github.com/sbloomberg1/competing-market-makers/actions/runs/34649873981) passed all tests and evaluated the actual signed registry images for 8,192 episodes. Runtime: 62.92s in the referee, 66.08s including the harness lifecycle. Scores and all accounting diagnostics exactly match the local full-size result, excluding elapsed time. All records reconcile. This is a second host and real published images, not an Apex stage run.
+
+`release/verification.json` links source, signed image digests and replay hash. Adjacent files contain both build metadata files, full Cosign verification output, the run/result and record verification. The private release asset `review-package.tar.gz` preserves the full replay under `released-evaluation/history/`. The historical `docker-full` results remain labeled as local images.

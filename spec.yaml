@@ -1,4 +1,4 @@
-# Release-source spec. Registry digests are filled by the signed release workflow.
+# Generated from a tagged, signed release.
 schema: apex.competition.v1
 id: competing_market_makers
 version: 0.1.1
@@ -11,7 +11,7 @@ resources:
   gpu_count: 0
 image:
   ref: ghcr.io/sbloomberg1/competing-market-makers-player
-  digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+  digest: sha256:dc473c1d5fad004ff9c747b71d20cfd79695ca4aeba779e85b376b77479a6f4f
 submission:
   artifact_type: code
   max_size_mb: 1
@@ -47,7 +47,7 @@ referee:
   protocol: gym_v1
   image:
     ref: ghcr.io/sbloomberg1/competing-market-makers-referee
-    digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+    digest: sha256:c14baa6990a34b4da67a03fd272626dfc2992e43b89dda95d0886f64e94c9cae
   timeout_s: 1200
 signature:
   cosign_identity: https://github.com/sbloomberg1/competing-market-makers/.github/workflows/release.yml@refs/tags/v0.1.1

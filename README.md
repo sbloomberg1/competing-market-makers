@@ -1,6 +1,6 @@
 # Competing Market Makers
 
-Research candidate 0.1.1. Local implementation and evidence are available; this is not an activated Apex competition. See `HANDOFF.md` for the admission status.
+Private research prerelease [v0.1.1](https://github.com/sbloomberg1/competing-market-makers/releases/tag/v0.1.1), with signed images and verified full-size evaluations. This is not an activated Apex competition. See `HANDOFF.md` for the admission status. Use the release assets for the final spec and review package; the immutable source tag predates image-digest finalization.
 
 Four submitted market makers compete for the same informed and retail order flow. All makers choose from the same prior market snapshot, with their own private account history.
 
